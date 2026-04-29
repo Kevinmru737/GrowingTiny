@@ -1,9 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dai0cp3labye2"]
+[gd_scene format=3 uid="uid://dai0cp3labye2"]
 
 [ext_resource type="Texture2D" uid="uid://biejmbvqfj2wx" path="res://art/characters/GRUNCLE_DANDELION_STILL_ANIM.png" id="1_bm2je"]
 [ext_resource type="Script" uid="uid://chg1a7edkp4gl" path="res://scripts/gruncle_dandelion.gd" id="2_axagq"]
 [ext_resource type="Texture2D" uid="uid://dwc5setpwf3ku" path="res://art/ui/UI_E.png" id="3_axagq"]
-[ext_resource type="PackedScene" uid="uid://c7vrmdmi45q4q" path="res://scenes/dialogue_ui.tscn" id="4_j6y56"]
+[ext_resource type="PackedScene" uid="uid://c7vrmdmi45q4q" path="res://scenes/ui/dialogue_ui.tscn" id="4_j6y56"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j6y56"]
 atlas = ExtResource("1_bm2je")
@@ -30,43 +30,43 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bm2je"]
 size = Vector2(552, 334)
 
-[node name="GruncleDandelion" type="AnimatableBody2D"]
+[node name="GruncleDandelion" type="AnimatableBody2D" unique_id=1122296337]
 script = ExtResource("2_axagq")
 
-[node name="AnimatableBody2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatableBody2D" type="AnimatedSprite2D" parent="." unique_id=1414213050]
 sprite_frames = SubResource("SpriteFrames_wdfhc")
 animation = &"idle"
 
-[node name="DialogueDetection" type="Area2D" parent="."]
+[node name="DialogueDetection" type="Area2D" parent="." unique_id=1157061247]
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueDetection"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueDetection" unique_id=798889589]
 position = Vector2(1, -17)
 shape = SubResource("RectangleShape2D_bm2je")
 debug_color = Color(0.061213233, 0.62820005, 0.48186225, 0.41960785)
 
-[node name="BubbleMarker" type="Marker2D" parent="."]
+[node name="BubbleMarker" type="Marker2D" parent="." unique_id=1387310815]
 
-[node name="InteractHint" type="Sprite2D" parent="."]
+[node name="InteractHint" type="Sprite2D" parent="." unique_id=489702663]
 visible = false
 position = Vector2(0, -240)
 texture = ExtResource("3_axagq")
 region_enabled = true
 region_rect = Rect2(168, 162, 114, 120)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=790359584]
 
-[node name="TaterSP" type="Marker2D" parent="."]
+[node name="TaterSP" type="Marker2D" parent="." unique_id=403604768]
 position = Vector2(-245, 103)
 
-[node name="DellaSP" type="Marker2D" parent="."]
+[node name="DellaSP" type="Marker2D" parent="." unique_id=1244615178]
 position = Vector2(220, 40)
 
-[node name="DialogueUI" parent="." instance=ExtResource("4_j6y56")]
+[node name="DialogueUI" parent="." unique_id=1681958293 instance=ExtResource("4_j6y56")]
 follow_viewport_enabled = false
 
-[node name="VoicePlayer" type="AudioStreamPlayer" parent="DialogueUI"]
+[node name="VoicePlayer" type="AudioStreamPlayer" parent="DialogueUI" unique_id=1063175678]
 
 [connection signal="body_entered" from="DialogueDetection" to="." method="_on_dialogue_detection_body_entered"]
 [connection signal="body_exited" from="DialogueDetection" to="." method="_on_dialogue_detection_body_exited"]

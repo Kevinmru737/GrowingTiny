@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://b64eh3a5uh734"]
+[gd_scene format=3 uid="uid://b64eh3a5uh734"]
 
 [ext_resource type="Script" uid="uid://bhkm8m2ua52n6" path="res://scripts/title_screen.gd" id="1_dc4i4"]
 [ext_resource type="FontFile" uid="uid://cgbh6ctohexex" path="res://art/ui/fonts/BitDaylong11_sRB_.TTF" id="2_mce2t"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://gccfdgd68aq3" path="res://art/environment/fall_level/Fall_BG_5_variation_3.png" id="23_htdhw"]
 [ext_resource type="PackedScene" uid="uid://bvxont8bhjyjn" path="res://scenes/camera_switcher.tscn" id="24_b344i"]
 [ext_resource type="Script" uid="uid://bqt0pxhgpcq1u" path="res://scripts/end_of_intro.gd" id="25_gm4k0"]
+[ext_resource type="Script" uid="uid://b8abip3ernchj" path="res://scripts/list_lobbies.gd" id="27_htdhw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mykxm"]
 bg_color = Color(0.7879986, 0.5388415, 0.29541335, 1)
@@ -55,10 +56,10 @@ size = Vector2(4419, 52)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b344i"]
 size = Vector2(388, 148)
 
-[node name="Title Screen" type="Node"]
+[node name="Title Screen" type="Node" unique_id=446342628]
 script = ExtResource("1_dc4i4")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=449995652]
 z_index = 7
 z_as_relative = false
 position = Vector2(962, -546)
@@ -68,13 +69,13 @@ limit_top = -1080
 limit_right = 3840
 limit_bottom = 0
 
-[node name="Multiplayer HUD" type="Control" parent="."]
+[node name="Multiplayer HUD" type="Control" parent="." unique_id=1876567119]
 unique_name_in_owner = true
 layout_mode = 3
 anchors_preset = 0
 metadata/_edit_use_anchors_ = true
 
-[node name="Panel" type="Panel" parent="Multiplayer HUD"]
+[node name="Panel" type="Panel" parent="Multiplayer HUD" unique_id=1180530210]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -86,7 +87,7 @@ offset_bottom = -405.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="JoinUI" type="VBoxContainer" parent="Multiplayer HUD/Panel"]
+[node name="JoinUI" type="VBoxContainer" parent="Multiplayer HUD/Panel" unique_id=1700225448]
 z_index = 5
 layout_mode = 0
 offset_left = -409.0
@@ -94,7 +95,7 @@ offset_top = -142.0
 offset_right = 374.0
 offset_bottom = 113.0
 
-[node name="IPLineEdit" type="LineEdit" parent="Multiplayer HUD/Panel/JoinUI"]
+[node name="IPLineEdit" type="LineEdit" parent="Multiplayer HUD/Panel/JoinUI" unique_id=901431194]
 layout_mode = 2
 size_flags_horizontal = 5
 size_flags_vertical = 3
@@ -106,7 +107,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_mykxm")
 placeholder_text = "Enter IP Address of Host"
 alignment = 1
 
-[node name="JoinButton" type="Button" parent="Multiplayer HUD/Panel/JoinUI"]
+[node name="JoinButton" type="Button" parent="Multiplayer HUD/Panel/JoinUI" unique_id=770117593]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -118,7 +119,7 @@ theme_override_styles/pressed = ExtResource("3_u26n3")
 theme_override_styles/hover = ExtResource("3_u26n3")
 text = "Join"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Multiplayer HUD/Panel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Multiplayer HUD/Panel" unique_id=1070929371]
 z_index = 6
 layout_mode = 0
 offset_left = -962.0
@@ -128,7 +129,7 @@ offset_bottom = 454.0
 scale = Vector2(0.24, 0.24)
 theme = SubResource("Theme_cs5ya")
 
-[node name="HostGame" type="TextureButton" parent="Multiplayer HUD/Panel/HBoxContainer"]
+[node name="HostGame" type="TextureButton" parent="Multiplayer HUD/Panel/HBoxContainer" unique_id=5104983]
 z_index = 2
 layout_mode = 2
 size_flags_horizontal = 3
@@ -136,7 +137,7 @@ texture_normal = SubResource("AtlasTexture_cs5ya")
 stretch_mode = 3
 script = ExtResource("3_mykxm")
 
-[node name="JoinAsPlayer2" type="TextureButton" parent="Multiplayer HUD/Panel/HBoxContainer"]
+[node name="JoinAsPlayer2" type="TextureButton" parent="Multiplayer HUD/Panel/HBoxContainer" unique_id=1515318461]
 z_index = 2
 layout_mode = 2
 size_flags_horizontal = 3
@@ -144,7 +145,7 @@ texture_normal = SubResource("AtlasTexture_mykxm")
 stretch_mode = 3
 script = ExtResource("3_mykxm")
 
-[node name="QuitGame" type="TextureButton" parent="Multiplayer HUD/Panel/HBoxContainer"]
+[node name="QuitGame" type="TextureButton" parent="Multiplayer HUD/Panel/HBoxContainer" unique_id=903108710]
 z_index = 2
 layout_mode = 2
 size_flags_horizontal = 3
@@ -152,7 +153,7 @@ texture_normal = SubResource("AtlasTexture_tklts")
 stretch_mode = 3
 script = ExtResource("3_mykxm")
 
-[node name="HostWaiting" type="Label" parent="Multiplayer HUD/Panel"]
+[node name="HostWaiting" type="Label" parent="Multiplayer HUD/Panel" unique_id=281087710]
 visible = false
 z_index = 6
 layout_mode = 0
@@ -166,13 +167,24 @@ theme_override_fonts/font = ExtResource("2_mce2t")
 theme_override_font_sizes/font_size = 50
 text = "Waiting for 2nd Player..."
 
-[node name="TitleScreenBG" type="Node2D" parent="." node_paths=PackedStringArray("layers")]
+[node name="Steam" type="Button" parent="Multiplayer HUD" unique_id=1255186254]
+z_index = 6
+layout_mode = 0
+offset_left = 485.0
+offset_top = -193.0
+offset_right = 493.0
+offset_bottom = -185.0
+theme_override_fonts/font = ExtResource("2_mce2t")
+theme_override_font_sizes/font_size = 32
+text = "STEAM"
+
+[node name="TitleScreenBG" type="Node2D" parent="." unique_id=52844049 node_paths=PackedStringArray("layers")]
 script = ExtResource("6_u26n3")
 layers = [NodePath("Parallax2DTitle/Title"), NodePath("Parallax2D/Sprite2D"), NodePath("Parallax2D2/Sprite2D2"), NodePath("Parallax2D3/Sprite2D3"), NodePath("Parallax2D4/Sprite2D4")]
 
-[node name="Parallax2DTitle" type="Parallax2D" parent="TitleScreenBG"]
+[node name="Parallax2DTitle" type="Parallax2D" parent="TitleScreenBG" unique_id=1575028902]
 
-[node name="Title" type="Sprite2D" parent="TitleScreenBG/Parallax2DTitle"]
+[node name="Title" type="Sprite2D" parent="TitleScreenBG/Parallax2DTitle" unique_id=1636571542]
 z_index = 5
 position = Vector2(960, -698)
 scale = Vector2(0.24, 0.24)
@@ -180,132 +192,184 @@ texture = ExtResource("12_ib7db")
 region_enabled = true
 region_rect = Rect2(0, 0, 8000, 3177)
 
-[node name="Parallax2D" type="Parallax2D" parent="TitleScreenBG"]
+[node name="Parallax2D" type="Parallax2D" parent="TitleScreenBG" unique_id=813113910]
 scroll_scale = Vector2(0.8, 1)
 scroll_offset = Vector2(-100, 0)
 limit_begin = Vector2(0, -10000000)
 
-[node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D"]
+[node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D" unique_id=329277288]
 position = Vector2(960, -540)
 texture = ExtResource("6_tklts")
 
-[node name="Sprite2D2" type="Sprite2D" parent="TitleScreenBG/Parallax2D"]
+[node name="Sprite2D2" type="Sprite2D" parent="TitleScreenBG/Parallax2D" unique_id=1154511109]
 position = Vector2(2880, -540)
 texture = ExtResource("12_p07av")
 
-[node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D"]
+[node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D" unique_id=1965509144]
 position = Vector2(4800, -540)
 texture = ExtResource("9_jr68i")
 
-[node name="Parallax2D2" type="Parallax2D" parent="TitleScreenBG"]
+[node name="Parallax2D2" type="Parallax2D" parent="TitleScreenBG" unique_id=2124294270]
 z_index = 1
 scroll_scale = Vector2(0.85, 1)
 limit_begin = Vector2(0, -10000000)
 
-[node name="Sprite2D2" type="Sprite2D" parent="TitleScreenBG/Parallax2D2"]
+[node name="Sprite2D2" type="Sprite2D" parent="TitleScreenBG/Parallax2D2" unique_id=1709806980]
 position = Vector2(960, -540)
 texture = ExtResource("7_u26n3")
 
-[node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D2"]
+[node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D2" unique_id=477376829]
 position = Vector2(2880, -540)
 texture = ExtResource("13_khjys")
 
-[node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D2"]
+[node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D2" unique_id=891741868]
 position = Vector2(4800, -540)
 texture = ExtResource("12_b344i")
 
-[node name="Parallax2D3" type="Parallax2D" parent="TitleScreenBG"]
+[node name="Parallax2D3" type="Parallax2D" parent="TitleScreenBG" unique_id=1898086886]
 z_index = 2
 scroll_scale = Vector2(0.9, 1)
 limit_begin = Vector2(0, -10000000)
 
-[node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D3"]
+[node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D3" unique_id=1698799597]
 position = Vector2(960, -540)
 texture = ExtResource("8_ib7db")
 
-[node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D3"]
+[node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D3" unique_id=894452493]
 position = Vector2(2880, -540)
 texture = ExtResource("14_174rq")
 
-[node name="Sprite2D4" type="Sprite2D" parent="TitleScreenBG/Parallax2D3"]
+[node name="Sprite2D4" type="Sprite2D" parent="TitleScreenBG/Parallax2D3" unique_id=596009339]
 position = Vector2(4800, -540)
 texture = ExtResource("15_gm4k0")
 
-[node name="Parallax2D4" type="Parallax2D" parent="TitleScreenBG"]
+[node name="Parallax2D4" type="Parallax2D" parent="TitleScreenBG" unique_id=2115932597]
 z_index = 4
 scroll_scale = Vector2(0.95, 1)
 limit_begin = Vector2(0, -10000000)
 
-[node name="Sprite2D4" type="Sprite2D" parent="TitleScreenBG/Parallax2D4"]
+[node name="Sprite2D4" type="Sprite2D" parent="TitleScreenBG/Parallax2D4" unique_id=1580086264]
 position = Vector2(960, -540)
 texture = ExtResource("9_frs5l")
 
-[node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D4"]
+[node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D4" unique_id=2063611652]
 position = Vector2(2880, -540)
 texture = ExtResource("15_lrxh4")
 
-[node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D4"]
+[node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D4" unique_id=506618449]
 position = Vector2(4800, -540)
 texture = ExtResource("18_mce2t")
 
-[node name="Parallax2D5" type="Parallax2D" parent="TitleScreenBG"]
+[node name="Parallax2D5" type="Parallax2D" parent="TitleScreenBG" unique_id=1462135454]
 z_index = 5
 limit_begin = Vector2(0, -10000000)
 
-[node name="Sprite2D5" type="Sprite2D" parent="TitleScreenBG/Parallax2D5"]
+[node name="Sprite2D5" type="Sprite2D" parent="TitleScreenBG/Parallax2D5" unique_id=1714879920]
 position = Vector2(960, -540)
 texture = ExtResource("10_mynnq")
 
-[node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D5"]
+[node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D5" unique_id=1638347353]
 position = Vector2(2880, -540)
 texture = ExtResource("16_neciy")
 
-[node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D5"]
+[node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D5" unique_id=598001562]
 position = Vector2(4800, -540)
 texture = ExtResource("16_neciy")
 
-[node name="Parallax2D6" type="Parallax2D" parent="TitleScreenBG"]
+[node name="Parallax2D6" type="Parallax2D" parent="TitleScreenBG" unique_id=1772403848]
 z_index = 6
 scroll_scale = Vector2(1.2, 1)
 limit_begin = Vector2(0, -10000000)
 
-[node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D6"]
+[node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D6" unique_id=1883605321]
 position = Vector2(960, -540)
 texture = ExtResource("17_khjys")
 
-[node name="Sprite2D2" type="Sprite2D" parent="TitleScreenBG/Parallax2D6"]
+[node name="Sprite2D2" type="Sprite2D" parent="TitleScreenBG/Parallax2D6" unique_id=1342813938]
 position = Vector2(2880, -540)
 texture = ExtResource("17_w03br")
 
-[node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D6"]
+[node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D6" unique_id=907440427]
 position = Vector2(4800, -540)
 texture = ExtResource("23_htdhw")
 
-[node name="Floor" type="StaticBody2D" parent="."]
+[node name="Floor" type="StaticBody2D" parent="." unique_id=1621243265]
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1412850817]
 z_index = 6
 position = Vector2(3030.5, -234)
 shape = SubResource("RectangleShape2D_u26n3")
 
-[node name="FakePlayerSpawn" type="Node2D" parent="."]
+[node name="FakePlayerSpawn" type="Node2D" parent="." unique_id=10956661]
 position = Vector2(1419, -373)
 
-[node name="Spawn" type="Marker2D" parent="FakePlayerSpawn"]
+[node name="Spawn" type="Marker2D" parent="FakePlayerSpawn" unique_id=563860623]
 position = Vector2(-83, 0)
 
-[node name="CameraSwitcher" parent="." instance=ExtResource("24_b344i")]
+[node name="CameraSwitcher" parent="." unique_id=260469429 instance=ExtResource("24_b344i")]
 visible = false
 
-[node name="EndOfIntro" type="Area2D" parent="."]
+[node name="EndOfIntro" type="Area2D" parent="." unique_id=1898290277]
 collision_mask = 3
 script = ExtResource("25_gm4k0")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="EndOfIntro"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EndOfIntro" unique_id=1722185222]
 z_index = 5
 position = Vector2(4160, -373)
 shape = SubResource("RectangleShape2D_b344i")
+
+[node name="SteamHUD" type="Control" parent="." unique_id=2142169140]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 1462.0
+offset_top = -643.0
+offset_right = 1862.0
+offset_bottom = -343.0
+
+[node name="Panel" type="Panel" parent="SteamHUD" unique_id=1383071025]
+z_index = 6
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Options" type="VBoxContainer" parent="SteamHUD/Panel" unique_id=145859303]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 160.0
+
+[node name="HostP2PGame" type="Button" parent="SteamHUD/Panel/Options" unique_id=1524204482]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mce2t")
+theme_override_font_sizes/font_size = 32
+text = "Host P2P 
+Game"
+
+[node name="ListLobbies" type="Button" parent="SteamHUD/Panel/Options" unique_id=1013586435]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_mce2t")
+theme_override_font_sizes/font_size = 32
+text = "List 
+Lobbies"
+script = ExtResource("27_htdhw")
+
+[node name="Lobbies" type="ScrollContainer" parent="SteamHUD/Panel" unique_id=454387022]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 180.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SteamHUD/Panel/Lobbies" unique_id=1255003706]
+layout_mode = 2
 
 [connection signal="pressed" from="Multiplayer HUD/Panel/JoinUI/JoinButton" to="." method="_on_join_button_pressed"]
 [connection signal="mouse_entered" from="Multiplayer HUD/Panel/HBoxContainer/HostGame" to="Multiplayer HUD/Panel/HBoxContainer/HostGame" method="_on_mouse_entered"]
@@ -316,6 +380,7 @@ shape = SubResource("RectangleShape2D_b344i")
 [connection signal="mouse_entered" from="Multiplayer HUD/Panel/HBoxContainer/QuitGame" to="Multiplayer HUD/Panel/HBoxContainer/QuitGame" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Multiplayer HUD/Panel/HBoxContainer/QuitGame" to="Multiplayer HUD/Panel/HBoxContainer/QuitGame" method="_on_mouse_exited"]
 [connection signal="pressed" from="Multiplayer HUD/Panel/HBoxContainer/QuitGame" to="." method="_on_quit_game_pressed"]
+[connection signal="pressed" from="Multiplayer HUD/Steam" to="." method="_on_steam_pressed"]
 [connection signal="body_entered" from="EndOfIntro" to="EndOfIntro" method="_on_body_entered"]
 
 [editable path="CameraSwitcher"]

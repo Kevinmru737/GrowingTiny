@@ -68,6 +68,8 @@ func waiting_for_player_2():
 	$"Multiplayer HUD/Panel/HostWaiting".show()
 	title.hide()
 	
+	
+	
 func make_run():
 	cam_switcher.blend_to(get_tree().get_first_node_in_group("FakePlayers").get_node("Camera2D"), 3)
 	await get_tree().create_timer(3).timeout
@@ -111,3 +113,7 @@ func add_fake_players():
 
 func _on_quit_game_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_steam_pressed() -> void:
+	SteamManager.initialize_steam()

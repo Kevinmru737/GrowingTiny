@@ -8,19 +8,23 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="COMP 4555 Game Project"
 run/main_scene="uid://b3lhw2u5gxcjw"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
 MultiplayerManager="*res://scripts/multiplayer_manager.gd"
 PlayerRef="*res://scripts/player_ref.gd"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 SceneTransitionAnimation="*res://scenes/scene_transition_animation.tscn"
 SoundManager="*res://scenes/sound_manager.tscn"
+SteamManager="*uid://0v4b5jnmkbtk"
 
 [dialogic]
 
@@ -83,10 +87,6 @@ window/size/viewport_height=1080
 window/size/always_on_top=true
 window/stretch/mode="viewport"
 window/per_pixel_transparency/allowed=true
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 [gui]
 

@@ -1,35 +1,40 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3lhw2u5gxcjw"]
+[gd_scene format=3 uid="uid://b3lhw2u5gxcjw"]
 
 [ext_resource type="Script" uid="uid://d00jrigit6kdy" path="res://scripts/game_manager.gd" id="1_yqjtg"]
+[ext_resource type="Script" uid="uid://cr1ghrx7mkak3" path="res://scripts/multiplayer/networks/network_manager.gd" id="2_iywne"]
 [ext_resource type="PackedScene" uid="uid://bbtwss2hx5h2" path="res://scenes/sound_manager.tscn" id="2_yqjtg"]
 [ext_resource type="Script" uid="uid://b7go5ti3l8xh0" path="res://scripts/pause_screen.gd" id="3_lbhrr"]
 [ext_resource type="Texture2D" uid="uid://c0xbjaauohcrh" path="res://art/ui/settings/game_setting_screen.png" id="3_lnu2h"]
 
-[node name="Game" type="Node"]
+[node name="Game" type="Node" unique_id=1810588245]
 
-[node name="GameManager" type="Node" parent="."]
+[node name="GameManager" type="Node" parent="." unique_id=1013679492]
 unique_name_in_owner = true
 script = ExtResource("1_yqjtg")
 
-[node name="Scene Container" type="Node" parent="GameManager"]
+[node name="Scene Container" type="Node" parent="GameManager" unique_id=683692165]
 
-[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+[node name="NetworkManager" type="Node" parent="." unique_id=760505247]
+unique_name_in_owner = true
+script = ExtResource("2_iywne")
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="." unique_id=1035894593]
 _spawnable_scenes = PackedStringArray("uid://b6bi0e0j6c1l5", "uid://cgm3o7qy8mlsm")
 spawn_path = NodePath("../Players")
 spawn_limit = 2
 
-[node name="Players" type="Node2D" parent="."]
+[node name="Players" type="Node2D" parent="." unique_id=710556437]
 z_index = 5
 z_as_relative = false
 position = Vector2(144, -395)
 
-[node name="SoundManager" parent="." instance=ExtResource("2_yqjtg")]
+[node name="SoundManager" parent="." unique_id=447509890 instance=ExtResource("2_yqjtg")]
 
-[node name="PauseScreen" type="CanvasLayer" parent="."]
+[node name="PauseScreen" type="CanvasLayer" parent="." unique_id=2013416312]
 layer = 3
 script = ExtResource("3_lbhrr")
 
-[node name="Control" type="Control" parent="PauseScreen"]
+[node name="Control" type="Control" parent="PauseScreen" unique_id=1091775131]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,7 +42,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Settings" type="Sprite2D" parent="PauseScreen/Control"]
+[node name="Settings" type="Sprite2D" parent="PauseScreen/Control" unique_id=1417770637]
 position = Vector2(959.99994, 540)
 scale = Vector2(0.23999998, 0.24)
 texture = ExtResource("3_lnu2h")

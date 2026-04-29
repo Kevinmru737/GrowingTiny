@@ -66,6 +66,10 @@ func join_as_player_2_connected():
 	print("connected player 2")
 	players_connected_signal.emit()
 	
+func list_steam_lobbies():
+	print("Listing Steam Lobbies...")
+	pass
+	
 func save_spec_tiles():
 	var tilemap = get_tree().get_first_node_in_group("SpecialInteract")
 	tilemap_original_state.clear()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://u8yq4rsfu80n"]
+[gd_scene format=3 uid="uid://d1o0fiwds486s"]
 
 [ext_resource type="Script" uid="uid://cc2vm66uppdcx" path="res://scripts/intro_level.gd" id="1_aimfc"]
 [ext_resource type="PackedScene" uid="uid://d03mf0utraa5l" path="res://scenes/player_tater_po.tscn" id="1_hab1w"]
@@ -85,10 +85,10 @@ _data = {
 &"move": SubResource("Animation_q6uy0")
 }
 
-[node name="intro_level" type="Node2D"]
+[node name="intro_level" type="Node2D" unique_id=40135678]
 script = ExtResource("1_aimfc")
 
-[node name="Environment" parent="." instance=ExtResource("1_jjk5a")]
+[node name="Environment" parent="." unique_id=1288010398 instance=ExtResource("1_jjk5a")]
 
 [node name="Background" parent="Environment" index="0"]
 position = Vector2(274, -118.999985)
@@ -99,64 +99,46 @@ position = Vector2(139, -189)
 [node name="Background2" parent="Environment" index="2"]
 position = Vector2(-152, 25)
 
-[node name="player_tater_po" parent="." instance=ExtResource("1_hab1w")]
-z_index = 5
+[node name="player_tater_po" parent="." unique_id=1979134479 instance=ExtResource("1_hab1w")]
 position = Vector2(222, -90.999985)
 scale = Vector2(0.2, 0.2)
 
-[node name="Camera2D" parent="player_tater_po" index="2"]
+[node name="Camera2D" parent="player_tater_po" index="1"]
 position = Vector2(49.999996, 0)
 zoom = Vector2(3, 3)
 
-[node name="KillZone" parent="." instance=ExtResource("4_jjk5a")]
+[node name="KillZone" parent="." unique_id=1418631558 instance=ExtResource("4_jjk5a")]
 position = Vector2(192, -99)
 
-[node name="Platforms" type="Node" parent="."]
+[node name="Platforms" type="Node" parent="." unique_id=1605313627]
 
-[node name="platform" parent="Platforms" instance=ExtResource("3_jq56v")]
+[node name="platform" parent="Platforms" unique_id=1337799156 instance=ExtResource("3_jq56v")]
 z_index = 4
 position = Vector2(314, -56)
 physics_material_override = SubResource("PhysicsMaterial_jjk5a")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/platform"]
-libraries = {
-&"": SubResource("AnimationLibrary_q6uy0")
-}
-autoplay = "move_up_and_down"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/platform" unique_id=952987854]
+libraries/ = SubResource("AnimationLibrary_q6uy0")
+autoplay = &"move_up_and_down"
 
-[node name="platform2" parent="Platforms" instance=ExtResource("3_jq56v")]
+[node name="platform2" parent="Platforms" unique_id=2067936204 instance=ExtResource("3_jq56v")]
 z_index = 4
 position = Vector2(75, -104)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/platform2"]
-libraries = {
-&"": SubResource("AnimationLibrary_nmhdb")
-}
-autoplay = "move"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/platform2" unique_id=159624772]
+libraries/ = SubResource("AnimationLibrary_nmhdb")
+autoplay = &"move"
 
-[node name="platform3" parent="Platforms" instance=ExtResource("3_jq56v")]
+[node name="platform3" parent="Platforms" unique_id=1448119461 instance=ExtResource("3_jq56v")]
 position = Vector2(86, -56)
 
-[node name="EndOfLevel" parent="." instance=ExtResource("5_q6uy0")]
+[node name="EndOfLevel" parent="." unique_id=573843439 instance=ExtResource("5_q6uy0")]
 z_index = 3
 position = Vector2(292, 88)
 
 [node name="CollisionShape2D" parent="EndOfLevel" index="0"]
 position = Vector2(158, -185)
 
-[node name="SceneTransitionAnimation" parent="EndOfLevel" index="2"]
-z_as_relative = false
-position = Vector2(-529, -222)
-
-[node name="ColorRect" parent="EndOfLevel/SceneTransitionAnimation" index="0"]
-z_index = -1
-z_as_relative = false
-offset_left = 196.0
-offset_top = -191.0
-offset_right = 905.0
-offset_bottom = 187.0
-
 [editable path="Environment"]
 [editable path="player_tater_po"]
 [editable path="EndOfLevel"]
-[editable path="EndOfLevel/SceneTransitionAnimation"]
