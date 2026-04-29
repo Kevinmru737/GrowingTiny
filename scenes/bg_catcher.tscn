@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cp3qoij7n1xwb"]
-
-[ext_resource type="PackedScene" uid="uid://cchnsv4jy25ve" path="res://scenes/catcher.tscn" id="1_ccec0"]
-
-[node name="BGCatcher" instance=ExtResource("1_ccec0")]
-
-[node name="Sprite2D" parent="." index="1"]
-z_index = 5
-region_rect = Rect2(58, 311, 219, 184)

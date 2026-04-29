@@ -57,7 +57,6 @@ func _on_dialogue_detection_body_exited(body: Node2D) -> void:
 			gruncle_layout.hide()
 		# Sync to all clients
 		_sync_player_in_area.rpc(body.player_id, false)
-		Dialogic.end_timeline()
 		if players_in_area.size() == 0:
 			$InteractHint.hide()
 

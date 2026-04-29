@@ -321,6 +321,7 @@ shape = SubResource("RectangleShape2D_b344i")
 
 [node name="SteamHUD" type="Control" parent="." unique_id=2142169140]
 unique_name_in_owner = true
+visible = false
 layout_mode = 3
 anchors_preset = 0
 offset_left = 1462.0

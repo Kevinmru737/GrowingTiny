@@ -1,9 +1,4 @@
 extends AnimatedSprite2D
-
-
-
-
-
 @onready var camera_switcher = $"../CameraSwitcher"
 
 # Dialogue Variables

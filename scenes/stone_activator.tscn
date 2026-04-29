@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3sybfw0b5wsp"]
+[gd_scene format=3 uid="uid://c3sybfw0b5wsp"]
 
 [ext_resource type="Texture2D" uid="uid://cbe4upxhppngg" path="res://art/props/STONE_PROPS.png" id="1_2mxca"]
 [ext_resource type="Script" uid="uid://dmlw2pw28wrqc" path="res://scripts/stone_activator.gd" id="1_3gn54"]
@@ -6,20 +6,20 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gn54"]
 size = Vector2(335.25, 233.2215)
 
-[node name="StoneActivator" type="Area2D"]
+[node name="StoneActivator" type="Area2D" unique_id=1368071386]
 z_index = 5
 collision_mask = 2
 script = ExtResource("1_3gn54")
 stone_brighten = 0.1
 stone_return = 0.4
 
-[node name="InteractBox" type="CollisionShape2D" parent="."]
+[node name="InteractBox" type="CollisionShape2D" parent="." unique_id=2046146331]
 z_index = 1
 position = Vector2(0, -32.54865)
 scale = Vector2(1.5347425, -1.5397265)
 shape = SubResource("RectangleShape2D_3gn54")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=717451509]
 texture = ExtResource("1_2mxca")
 region_enabled = true
 region_rect = Rect2(87, 140, 345, 332)

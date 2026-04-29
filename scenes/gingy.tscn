@@ -1,9 +1,9 @@
-[gd_scene load_steps=114 format=3 uid="uid://bpx7663ahh1sb"]
+[gd_scene format=3 uid="uid://bpx7663ahh1sb"]
 
 [ext_resource type="Script" uid="uid://xhpxexodudeg" path="res://scripts/gingy.gd" id="1_d5xx8"]
 [ext_resource type="Texture2D" uid="uid://vkrfjfhim4v1" path="res://art/characters/GINGY_ANIM_SEQUENCES.png" id="1_lclac"]
 [ext_resource type="Texture2D" uid="uid://dwc5setpwf3ku" path="res://art/ui/UI_E.png" id="3_0wi7c"]
-[ext_resource type="Script" uid="uid://bawcyynepye6o" path="res://scripts/dialogue_ginger.gd" id="4_i3e4b"]
+[ext_resource type="Script" uid="uid://bawcyynepye6o" path="res://scripts/dialogue/dialogue_ginger.gd" id="4_i3e4b"]
 [ext_resource type="FontFile" uid="uid://cgbh6ctohexex" path="res://art/ui/fonts/BitDaylong11_sRB_.TTF" id="5_0j8lq"]
 [ext_resource type="Texture2D" uid="uid://bqcojbvppmaiv" path="res://art/ui/dialogue/GingerDialogue.png" id="6_i3e4b"]
 [ext_resource type="Texture2D" uid="uid://cxkjkcmla26vr" path="res://art/ui/dialogue/GarlicDialogue.png" id="7_10q3b"]
@@ -1124,53 +1124,53 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="Gingy" type="AnimatableBody2D"]
+[node name="Gingy" type="AnimatableBody2D" unique_id=1797560101]
 z_index = 5
 script = ExtResource("1_d5xx8")
 
-[node name="Ric" type="AnimatedSprite2D" parent="."]
+[node name="Ric" type="AnimatedSprite2D" parent="." unique_id=2095512407]
 position = Vector2(115, 25)
 sprite_frames = SubResource("SpriteFrames_cy0gx")
 
-[node name="AnimatableBody2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatableBody2D" type="AnimatedSprite2D" parent="." unique_id=868935473]
 sprite_frames = SubResource("SpriteFrames_8uepa")
 animation = &"idle"
 frame_progress = 0.25843522
 
-[node name="DialogueDetection" type="Area2D" parent="."]
+[node name="DialogueDetection" type="Area2D" parent="." unique_id=1660612386]
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueDetection"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogueDetection" unique_id=1093374109]
 position = Vector2(1, -17)
 shape = SubResource("RectangleShape2D_q7pjq")
 debug_color = Color(0.061213233, 0.62820005, 0.48186225, 0.41960785)
 
-[node name="BubbleMarker" type="Marker2D" parent="."]
+[node name="BubbleMarker" type="Marker2D" parent="." unique_id=1318445177]
 
-[node name="InteractHint" type="Sprite2D" parent="."]
+[node name="InteractHint" type="Sprite2D" parent="." unique_id=534725078]
 visible = false
 position = Vector2(0, -240)
 texture = ExtResource("3_0wi7c")
 region_enabled = true
 region_rect = Rect2(168, 162, 114, 120)
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=295436549]
 limit_left = -1000
 limit_top = -1080
 limit_right = 3060
 limit_bottom = 0
 
-[node name="TaterSP" type="Marker2D" parent="."]
+[node name="TaterSP" type="Marker2D" parent="." unique_id=1202326642]
 position = Vector2(-245, 103)
 
-[node name="DellaSP" type="Marker2D" parent="."]
+[node name="DellaSP" type="Marker2D" parent="." unique_id=430269008]
 position = Vector2(220, 40)
 
-[node name="DialogueUI" type="CanvasLayer" parent="."]
+[node name="DialogueUI" type="CanvasLayer" parent="." unique_id=1601450819]
 script = ExtResource("4_i3e4b")
 
-[node name="Anchor" type="Control" parent="DialogueUI"]
+[node name="Anchor" type="Control" parent="DialogueUI" unique_id=478363600]
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 7
@@ -1184,13 +1184,13 @@ offset_right = 960.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="PanelContainer" type="PanelContainer" parent="DialogueUI/Anchor"]
+[node name="PanelContainer" type="PanelContainer" parent="DialogueUI/Anchor" unique_id=198263229]
 layout_mode = 1
 offset_right = 1920.0
 offset_bottom = 1080.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_6q285")
 
-[node name="NameBox" type="Label" parent="DialogueUI/Anchor"]
+[node name="NameBox" type="Label" parent="DialogueUI/Anchor" unique_id=1241076798]
 z_index = 1
 layout_mode = 0
 offset_left = 714.0
@@ -1202,36 +1202,36 @@ theme_override_fonts/font = ExtResource("5_0j8lq")
 theme_override_font_sizes/font_size = 20
 horizontal_alignment = 1
 
-[node name="Speakers" type="Node2D" parent="DialogueUI/Anchor"]
+[node name="Speakers" type="Node2D" parent="DialogueUI/Anchor" unique_id=521901662]
 
-[node name="Ginger" type="Sprite2D" parent="DialogueUI/Anchor/Speakers"]
+[node name="Ginger" type="Sprite2D" parent="DialogueUI/Anchor/Speakers" unique_id=1989937845]
 position = Vector2(2, 0)
 texture = ExtResource("6_i3e4b")
 centered = false
 
-[node name="Garlic" type="Sprite2D" parent="DialogueUI/Anchor/Speakers"]
+[node name="Garlic" type="Sprite2D" parent="DialogueUI/Anchor/Speakers" unique_id=1906919575]
 texture = ExtResource("7_10q3b")
 centered = false
 
-[node name="TaterPo" type="Sprite2D" parent="DialogueUI/Anchor/Speakers"]
+[node name="TaterPo" type="Sprite2D" parent="DialogueUI/Anchor/Speakers" unique_id=434737204]
 texture = ExtResource("8_vv3cp")
 centered = false
 
-[node name="DellaDaisy" type="Sprite2D" parent="DialogueUI/Anchor/Speakers"]
+[node name="DellaDaisy" type="Sprite2D" parent="DialogueUI/Anchor/Speakers" unique_id=1560931557]
 texture = ExtResource("9_vo3ks")
 centered = false
 
-[node name="TaterAnim" type="AnimatedSprite2D" parent="DialogueUI/Anchor"]
+[node name="TaterAnim" type="AnimatedSprite2D" parent="DialogueUI/Anchor" unique_id=1969026231]
 position = Vector2(1131, 758)
 sprite_frames = SubResource("SpriteFrames_rn5aw")
 animation = &"idle"
 
-[node name="DellaAnim" type="AnimatedSprite2D" parent="DialogueUI/Anchor"]
+[node name="DellaAnim" type="AnimatedSprite2D" parent="DialogueUI/Anchor" unique_id=1696052048]
 position = Vector2(1296, 735)
 sprite_frames = SubResource("SpriteFrames_8oo06")
 animation = &"idle"
 
-[node name="DialogBox" type="RichTextLabel" parent="DialogueUI/Anchor"]
+[node name="DialogBox" type="RichTextLabel" parent="DialogueUI/Anchor" unique_id=120596822]
 layout_mode = 0
 offset_left = 655.0
 offset_top = 873.0
@@ -1241,8 +1241,8 @@ theme_override_colors/default_color = Color(0.4627451, 0.28235295, 0.16470589, 1
 theme_override_fonts/normal_font = ExtResource("5_0j8lq")
 theme_override_font_sizes/normal_font_size = 24
 
-[node name="TextAdvance" type="AudioStreamPlayer" parent="DialogueUI"]
+[node name="TextAdvance" type="AudioStreamPlayer" parent="DialogueUI" unique_id=2116152355]
 stream = ExtResource("10_vo3ks")
 volume_db = -10.0
 
-[node name="CameraSwitcher" parent="DialogueUI" instance=ExtResource("11_cy0gx")]
+[node name="CameraSwitcher" parent="DialogueUI" unique_id=1019881057 instance=ExtResource("11_cy0gx")]
