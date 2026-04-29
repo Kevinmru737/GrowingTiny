@@ -23,6 +23,7 @@ func _ready():
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("settings"):
+	#Implemenent a check for state if in-game here!! (pause menu should only work in gameplay mode, not main menu)
 		if pause_screen.visible:
 			pause_screen.hide()
 		else:
