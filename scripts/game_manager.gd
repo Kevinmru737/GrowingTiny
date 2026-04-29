@@ -3,7 +3,7 @@ extends Node
 #signal game_started_signal
 signal players_connected_signal
 
-@onready var title_scene = preload("res://scenes/title_screen.tscn")
+@onready var title_scene = preload("res://scenes/ui/title_screen.tscn")
 #@onready var tutorial_scene = preload("res://scenes/tutorial.tscn")
 @onready var scene_container = $"Scene Container"
 @onready var title_node = title_scene.instantiate()

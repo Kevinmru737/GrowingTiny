@@ -1,32 +1,32 @@
 [gd_scene format=3 uid="uid://b64eh3a5uh734"]
 
-[ext_resource type="Script" uid="uid://bhkm8m2ua52n6" path="res://scripts/title_screen.gd" id="1_dc4i4"]
-[ext_resource type="FontFile" uid="uid://cgbh6ctohexex" path="res://art/ui/fonts/BitDaylong11_sRB_.TTF" id="2_mce2t"]
-[ext_resource type="StyleBox" uid="uid://bv3nll7udi6yl" path="res://styles/join_button_style.tres" id="2_tklts"]
-[ext_resource type="Script" uid="uid://dm1yxy7oephsl" path="res://scripts/title_button.gd" id="3_mykxm"]
-[ext_resource type="StyleBox" uid="uid://c3x2af6j6qwvw" path="res://styles/join_button_style_hover.tres" id="3_u26n3"]
-[ext_resource type="Texture2D" uid="uid://c4yuya17ycl2v" path="res://art/ui/title_screen/Fall_StartScreen_1.png" id="6_tklts"]
-[ext_resource type="Script" uid="uid://ke476172tcvl" path="res://scripts/backgrounds_2.gd" id="6_u26n3"]
-[ext_resource type="Texture2D" uid="uid://da8mw3al5vqab" path="res://art/ui/title_screen/Fall_StartScreen_2.png" id="7_u26n3"]
-[ext_resource type="Texture2D" uid="uid://bhkijfgps11x5" path="res://art/ui/title_screen/Fall_StartScreen_3.png" id="8_ib7db"]
-[ext_resource type="Texture2D" uid="uid://d0oo248jmt5kc" path="res://art/ui/title_screen/Fall_StartScreen_4.png" id="9_frs5l"]
-[ext_resource type="Texture2D" uid="uid://ef7rfdbh44fk" path="res://art/environment/fall_level/Fall_BG_1.png" id="9_jr68i"]
-[ext_resource type="Texture2D" uid="uid://csvnsk3hob2j3" path="res://art/ui/title_screen/Fall_StartScreen_5.png" id="10_mynnq"]
-[ext_resource type="Texture2D" uid="uid://cnbydivbdjslm" path="res://art/environment/fall_level/Fall_BG_2.png" id="12_b344i"]
-[ext_resource type="Texture2D" uid="uid://cpj4n3cp3qpln" path="res://art/ui/title_screen/Titlescreen_Text.png" id="12_ib7db"]
-[ext_resource type="Texture2D" uid="uid://bj3sywm20kd7p" path="res://art/ui/title_screen/Fall_Transition1.png" id="12_p07av"]
-[ext_resource type="Texture2D" uid="uid://dypcsdnhrkmt5" path="res://art/ui/title_screen/Fall_Transition_2.png" id="13_khjys"]
-[ext_resource type="Texture2D" uid="uid://cu3xtopngvmw6" path="res://art/ui/title_screen/Fall_Transition_3.png" id="14_174rq"]
-[ext_resource type="Texture2D" uid="uid://c0mxv2y1vvvo0" path="res://art/environment/fall_level/Fall_BG_3.png" id="15_gm4k0"]
-[ext_resource type="Texture2D" uid="uid://dcjm4b71qyyki" path="res://art/ui/title_screen/Fall_Transition_4.png" id="15_lrxh4"]
-[ext_resource type="Texture2D" uid="uid://bganmj4o6eirs" path="res://art/ui/title_screen/Fall_Transition_5.png" id="16_neciy"]
-[ext_resource type="Texture2D" uid="uid://bfnuowrhwsmmy" path="res://art/ui/title_screen/Fall_StartScreen_6.png" id="17_khjys"]
-[ext_resource type="Texture2D" uid="uid://lsapa1a8surw" path="res://art/ui/title_screen/Fall_Transition_6.png" id="17_w03br"]
-[ext_resource type="Texture2D" uid="uid://53ghvtgd5j8r" path="res://art/environment/fall_level/Fall_BG_4_variation_1.png" id="18_mce2t"]
-[ext_resource type="Texture2D" uid="uid://gccfdgd68aq3" path="res://art/environment/fall_level/Fall_BG_5_variation_3.png" id="23_htdhw"]
-[ext_resource type="PackedScene" uid="uid://bvxont8bhjyjn" path="res://scenes/camera_switcher.tscn" id="24_b344i"]
-[ext_resource type="Script" uid="uid://bqt0pxhgpcq1u" path="res://scripts/end_of_intro.gd" id="25_gm4k0"]
-[ext_resource type="Script" uid="uid://b8abip3ernchj" path="res://scripts/list_lobbies.gd" id="27_htdhw"]
+[ext_resource type="Script" uid="uid://bhkm8m2ua52n6" path="res://scripts/title_screen.gd" id="1_uq7ri"]
+[ext_resource type="FontFile" uid="uid://cgbh6ctohexex" path="res://art/ui/fonts/BitDaylong11_sRB_.TTF" id="2_a1a6k"]
+[ext_resource type="StyleBox" uid="uid://bv3nll7udi6yl" path="res://styles/join_button_style.tres" id="3_s5b5j"]
+[ext_resource type="StyleBox" uid="uid://c3x2af6j6qwvw" path="res://styles/join_button_style_hover.tres" id="4_gii8i"]
+[ext_resource type="Texture2D" uid="uid://cpj4n3cp3qpln" path="res://art/ui/title_screen/Titlescreen_Text.png" id="5_qmpbx"]
+[ext_resource type="Script" uid="uid://dm1yxy7oephsl" path="res://scripts/title_button.gd" id="6_45ekq"]
+[ext_resource type="Script" uid="uid://ke476172tcvl" path="res://scripts/backgrounds_2.gd" id="7_pjtig"]
+[ext_resource type="Texture2D" uid="uid://c4yuya17ycl2v" path="res://art/ui/title_screen/Fall_StartScreen_1.png" id="8_g7rwo"]
+[ext_resource type="Texture2D" uid="uid://bj3sywm20kd7p" path="res://art/ui/title_screen/Fall_Transition1.png" id="9_jvbw3"]
+[ext_resource type="Texture2D" uid="uid://ef7rfdbh44fk" path="res://art/environment/fall_level/Fall_BG_1.png" id="10_kvnms"]
+[ext_resource type="Texture2D" uid="uid://da8mw3al5vqab" path="res://art/ui/title_screen/Fall_StartScreen_2.png" id="11_4f8jo"]
+[ext_resource type="Texture2D" uid="uid://dypcsdnhrkmt5" path="res://art/ui/title_screen/Fall_Transition_2.png" id="12_tir74"]
+[ext_resource type="Texture2D" uid="uid://cnbydivbdjslm" path="res://art/environment/fall_level/Fall_BG_2.png" id="13_v4xnd"]
+[ext_resource type="Texture2D" uid="uid://bhkijfgps11x5" path="res://art/ui/title_screen/Fall_StartScreen_3.png" id="14_lkldw"]
+[ext_resource type="Texture2D" uid="uid://cu3xtopngvmw6" path="res://art/ui/title_screen/Fall_Transition_3.png" id="15_festp"]
+[ext_resource type="Texture2D" uid="uid://c0mxv2y1vvvo0" path="res://art/environment/fall_level/Fall_BG_3.png" id="16_sqrr8"]
+[ext_resource type="Texture2D" uid="uid://d0oo248jmt5kc" path="res://art/ui/title_screen/Fall_StartScreen_4.png" id="17_7gugi"]
+[ext_resource type="Texture2D" uid="uid://dcjm4b71qyyki" path="res://art/ui/title_screen/Fall_Transition_4.png" id="18_g7xii"]
+[ext_resource type="Texture2D" uid="uid://53ghvtgd5j8r" path="res://art/environment/fall_level/Fall_BG_4_variation_1.png" id="19_kvaa7"]
+[ext_resource type="Texture2D" uid="uid://csvnsk3hob2j3" path="res://art/ui/title_screen/Fall_StartScreen_5.png" id="20_wpbet"]
+[ext_resource type="Texture2D" uid="uid://bganmj4o6eirs" path="res://art/ui/title_screen/Fall_Transition_5.png" id="21_x820k"]
+[ext_resource type="Texture2D" uid="uid://bfnuowrhwsmmy" path="res://art/ui/title_screen/Fall_StartScreen_6.png" id="22_u8ss3"]
+[ext_resource type="Texture2D" uid="uid://lsapa1a8surw" path="res://art/ui/title_screen/Fall_Transition_6.png" id="23_dksua"]
+[ext_resource type="Texture2D" uid="uid://gccfdgd68aq3" path="res://art/environment/fall_level/Fall_BG_5_variation_3.png" id="24_dufxj"]
+[ext_resource type="PackedScene" uid="uid://bvxont8bhjyjn" path="res://scenes/camera_switcher.tscn" id="25_mj62m"]
+[ext_resource type="Script" uid="uid://bqt0pxhgpcq1u" path="res://scripts/end_of_intro.gd" id="26_le3e3"]
+[ext_resource type="Script" uid="uid://b8abip3ernchj" path="res://scripts/list_lobbies.gd" id="27_ivfjy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mykxm"]
 bg_color = Color(0.7879986, 0.5388415, 0.29541335, 1)
@@ -39,15 +39,15 @@ corner_radius_bottom_left = 10
 [sub_resource type="Theme" id="Theme_cs5ya"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cs5ya"]
-atlas = ExtResource("12_ib7db")
+atlas = ExtResource("5_qmpbx")
 region = Rect2(536, 3773, 939, 242)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mykxm"]
-atlas = ExtResource("12_ib7db")
+atlas = ExtResource("5_qmpbx")
 region = Rect2(3602, 3773, 798, 241)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tklts"]
-atlas = ExtResource("12_ib7db")
+atlas = ExtResource("5_qmpbx")
 region = Rect2(6764, 3773, 686, 242)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u26n3"]
@@ -57,7 +57,7 @@ size = Vector2(4419, 52)
 size = Vector2(388, 148)
 
 [node name="Title Screen" type="Node" unique_id=446342628]
-script = ExtResource("1_dc4i4")
+script = ExtResource("1_uq7ri")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=449995652]
 z_index = 7
@@ -101,7 +101,7 @@ size_flags_horizontal = 5
 size_flags_vertical = 3
 theme_override_constants/outline_size = 0
 theme_override_constants/caret_width = 2
-theme_override_fonts/font = ExtResource("2_mce2t")
+theme_override_fonts/font = ExtResource("2_a1a6k")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_mykxm")
 placeholder_text = "Enter IP Address of Host"
@@ -112,11 +112,11 @@ custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 3
-theme_override_fonts/font = ExtResource("2_mce2t")
+theme_override_fonts/font = ExtResource("2_a1a6k")
 theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = ExtResource("2_tklts")
-theme_override_styles/pressed = ExtResource("3_u26n3")
-theme_override_styles/hover = ExtResource("3_u26n3")
+theme_override_styles/normal = ExtResource("3_s5b5j")
+theme_override_styles/pressed = ExtResource("4_gii8i")
+theme_override_styles/hover = ExtResource("4_gii8i")
 text = "Join"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Multiplayer HUD/Panel" unique_id=1070929371]
@@ -135,7 +135,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = SubResource("AtlasTexture_cs5ya")
 stretch_mode = 3
-script = ExtResource("3_mykxm")
+script = ExtResource("6_45ekq")
 
 [node name="JoinAsPlayer2" type="TextureButton" parent="Multiplayer HUD/Panel/HBoxContainer" unique_id=1515318461]
 z_index = 2
@@ -143,7 +143,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = SubResource("AtlasTexture_mykxm")
 stretch_mode = 3
-script = ExtResource("3_mykxm")
+script = ExtResource("6_45ekq")
 
 [node name="QuitGame" type="TextureButton" parent="Multiplayer HUD/Panel/HBoxContainer" unique_id=903108710]
 z_index = 2
@@ -151,7 +151,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = SubResource("AtlasTexture_tklts")
 stretch_mode = 3
-script = ExtResource("3_mykxm")
+script = ExtResource("6_45ekq")
 
 [node name="HostWaiting" type="Label" parent="Multiplayer HUD/Panel" unique_id=281087710]
 visible = false
@@ -163,23 +163,24 @@ offset_right = 280.0
 offset_bottom = -141.0
 theme_override_colors/font_shadow_color = Color(0.53288054, 0.3106939, 0, 1)
 theme_override_constants/shadow_outline_size = 9
-theme_override_fonts/font = ExtResource("2_mce2t")
+theme_override_fonts/font = ExtResource("2_a1a6k")
 theme_override_font_sizes/font_size = 50
 text = "Waiting for 2nd Player..."
 
 [node name="Steam" type="Button" parent="Multiplayer HUD" unique_id=1255186254]
+visible = false
 z_index = 6
 layout_mode = 0
 offset_left = 485.0
 offset_top = -193.0
 offset_right = 493.0
 offset_bottom = -185.0
-theme_override_fonts/font = ExtResource("2_mce2t")
+theme_override_fonts/font = ExtResource("2_a1a6k")
 theme_override_font_sizes/font_size = 32
 text = "STEAM"
 
 [node name="TitleScreenBG" type="Node2D" parent="." unique_id=52844049 node_paths=PackedStringArray("layers")]
-script = ExtResource("6_u26n3")
+script = ExtResource("7_pjtig")
 layers = [NodePath("Parallax2DTitle/Title"), NodePath("Parallax2D/Sprite2D"), NodePath("Parallax2D2/Sprite2D2"), NodePath("Parallax2D3/Sprite2D3"), NodePath("Parallax2D4/Sprite2D4")]
 
 [node name="Parallax2DTitle" type="Parallax2D" parent="TitleScreenBG" unique_id=1575028902]
@@ -188,7 +189,7 @@ layers = [NodePath("Parallax2DTitle/Title"), NodePath("Parallax2D/Sprite2D"), No
 z_index = 5
 position = Vector2(960, -698)
 scale = Vector2(0.24, 0.24)
-texture = ExtResource("12_ib7db")
+texture = ExtResource("5_qmpbx")
 region_enabled = true
 region_rect = Rect2(0, 0, 8000, 3177)
 
@@ -199,15 +200,15 @@ limit_begin = Vector2(0, -10000000)
 
 [node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D" unique_id=329277288]
 position = Vector2(960, -540)
-texture = ExtResource("6_tklts")
+texture = ExtResource("8_g7rwo")
 
 [node name="Sprite2D2" type="Sprite2D" parent="TitleScreenBG/Parallax2D" unique_id=1154511109]
 position = Vector2(2880, -540)
-texture = ExtResource("12_p07av")
+texture = ExtResource("9_jvbw3")
 
 [node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D" unique_id=1965509144]
 position = Vector2(4800, -540)
-texture = ExtResource("9_jr68i")
+texture = ExtResource("10_kvnms")
 
 [node name="Parallax2D2" type="Parallax2D" parent="TitleScreenBG" unique_id=2124294270]
 z_index = 1
@@ -216,15 +217,15 @@ limit_begin = Vector2(0, -10000000)
 
 [node name="Sprite2D2" type="Sprite2D" parent="TitleScreenBG/Parallax2D2" unique_id=1709806980]
 position = Vector2(960, -540)
-texture = ExtResource("7_u26n3")
+texture = ExtResource("11_4f8jo")
 
 [node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D2" unique_id=477376829]
 position = Vector2(2880, -540)
-texture = ExtResource("13_khjys")
+texture = ExtResource("12_tir74")
 
 [node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D2" unique_id=891741868]
 position = Vector2(4800, -540)
-texture = ExtResource("12_b344i")
+texture = ExtResource("13_v4xnd")
 
 [node name="Parallax2D3" type="Parallax2D" parent="TitleScreenBG" unique_id=1898086886]
 z_index = 2
@@ -233,15 +234,15 @@ limit_begin = Vector2(0, -10000000)
 
 [node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D3" unique_id=1698799597]
 position = Vector2(960, -540)
-texture = ExtResource("8_ib7db")
+texture = ExtResource("14_lkldw")
 
 [node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D3" unique_id=894452493]
 position = Vector2(2880, -540)
-texture = ExtResource("14_174rq")
+texture = ExtResource("15_festp")
 
 [node name="Sprite2D4" type="Sprite2D" parent="TitleScreenBG/Parallax2D3" unique_id=596009339]
 position = Vector2(4800, -540)
-texture = ExtResource("15_gm4k0")
+texture = ExtResource("16_sqrr8")
 
 [node name="Parallax2D4" type="Parallax2D" parent="TitleScreenBG" unique_id=2115932597]
 z_index = 4
@@ -250,15 +251,15 @@ limit_begin = Vector2(0, -10000000)
 
 [node name="Sprite2D4" type="Sprite2D" parent="TitleScreenBG/Parallax2D4" unique_id=1580086264]
 position = Vector2(960, -540)
-texture = ExtResource("9_frs5l")
+texture = ExtResource("17_7gugi")
 
 [node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D4" unique_id=2063611652]
 position = Vector2(2880, -540)
-texture = ExtResource("15_lrxh4")
+texture = ExtResource("18_g7xii")
 
 [node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D4" unique_id=506618449]
 position = Vector2(4800, -540)
-texture = ExtResource("18_mce2t")
+texture = ExtResource("19_kvaa7")
 
 [node name="Parallax2D5" type="Parallax2D" parent="TitleScreenBG" unique_id=1462135454]
 z_index = 5
@@ -266,15 +267,15 @@ limit_begin = Vector2(0, -10000000)
 
 [node name="Sprite2D5" type="Sprite2D" parent="TitleScreenBG/Parallax2D5" unique_id=1714879920]
 position = Vector2(960, -540)
-texture = ExtResource("10_mynnq")
+texture = ExtResource("20_wpbet")
 
 [node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D5" unique_id=1638347353]
 position = Vector2(2880, -540)
-texture = ExtResource("16_neciy")
+texture = ExtResource("21_x820k")
 
 [node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D5" unique_id=598001562]
 position = Vector2(4800, -540)
-texture = ExtResource("16_neciy")
+texture = ExtResource("21_x820k")
 
 [node name="Parallax2D6" type="Parallax2D" parent="TitleScreenBG" unique_id=1772403848]
 z_index = 6
@@ -283,15 +284,15 @@ limit_begin = Vector2(0, -10000000)
 
 [node name="Sprite2D" type="Sprite2D" parent="TitleScreenBG/Parallax2D6" unique_id=1883605321]
 position = Vector2(960, -540)
-texture = ExtResource("17_khjys")
+texture = ExtResource("22_u8ss3")
 
 [node name="Sprite2D2" type="Sprite2D" parent="TitleScreenBG/Parallax2D6" unique_id=1342813938]
 position = Vector2(2880, -540)
-texture = ExtResource("17_w03br")
+texture = ExtResource("23_dksua")
 
 [node name="Sprite2D3" type="Sprite2D" parent="TitleScreenBG/Parallax2D6" unique_id=907440427]
 position = Vector2(4800, -540)
-texture = ExtResource("23_htdhw")
+texture = ExtResource("24_dufxj")
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=1621243265]
 collision_mask = 0
@@ -307,12 +308,12 @@ position = Vector2(1419, -373)
 [node name="Spawn" type="Marker2D" parent="FakePlayerSpawn" unique_id=563860623]
 position = Vector2(-83, 0)
 
-[node name="CameraSwitcher" parent="." unique_id=260469429 instance=ExtResource("24_b344i")]
+[node name="CameraSwitcher" parent="." unique_id=260469429 instance=ExtResource("25_mj62m")]
 visible = false
 
 [node name="EndOfIntro" type="Area2D" parent="." unique_id=1898290277]
 collision_mask = 3
-script = ExtResource("25_gm4k0")
+script = ExtResource("26_le3e3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EndOfIntro" unique_id=1722185222]
 z_index = 5
@@ -345,18 +346,18 @@ offset_bottom = 160.0
 
 [node name="HostP2PGame" type="Button" parent="SteamHUD/Panel/Options" unique_id=1524204482]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_mce2t")
+theme_override_fonts/font = ExtResource("2_a1a6k")
 theme_override_font_sizes/font_size = 32
 text = "Host P2P 
 Game"
 
 [node name="ListLobbies" type="Button" parent="SteamHUD/Panel/Options" unique_id=1013586435]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("2_mce2t")
+theme_override_fonts/font = ExtResource("2_a1a6k")
 theme_override_font_sizes/font_size = 32
 text = "List 
 Lobbies"
-script = ExtResource("27_htdhw")
+script = ExtResource("27_ivfjy")
 
 [node name="Lobbies" type="ScrollContainer" parent="SteamHUD/Panel" unique_id=454387022]
 layout_mode = 1
