@@ -1,8 +1,0 @@
-join GruncleDandelion center
-GruncleDandelion: Hey
-GruncleDandelion: What's up
-GruncleDandelion: My name?
-set {gruncle_name} = "Gruncle Dandelion"
-GruncleDandelion: Gruncle Dandelion
-GruncleDandelion: ...
-GruncleDandelion: Word.

@@ -14,7 +14,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="COMP 4555 Game Project"
+config/name="GrowingTiny"
 run/main_scene="uid://b3lhw2u5gxcjw"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
