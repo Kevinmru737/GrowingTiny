@@ -9,7 +9,7 @@ signal players_connected_signal
 @onready var title_node = title_scene.instantiate()
 @onready var pause_screen = $"../PauseScreen"
 #All Scenes to be loaded in chronological order
-var scene_list = ["res://scenes/level_1.tscn", "res://scenes/level_2.tscn","res://scenes/credit_screen.tscn"]
+var scene_list = ["res://scenes/levels/level_1.tscn", "res://scenes/levels/level_2.tscn","res://scenes/ui/credit_screen.tscn"]
 var tilemap_original_state = {}
 var player2_id
 var players_connected = false
@@ -30,7 +30,7 @@ func _input(_event: InputEvent) -> void:
 	
 func next_scene():
 	var scene_to_load = scene_list[0]
-	if scene_to_load == "res://scenes/level_1.tscn" and multiplayer.is_server():
+	if scene_to_load == "res://scenes/levels/level_1.tscn" and multiplayer.is_server():
 		rpc("start_game")
 		print("loading scene", scene_to_load)
 	if scene_to_load:
@@ -55,7 +55,7 @@ func become_host():
 	
 @rpc("authority", "reliable")
 func start_game():
-	MultiplayerManager.request_scene_change("res://scenes/level_1.tscn")
+	MultiplayerManager.request_scene_change("res://scenes/levels/level_1.tscn")
 
 func join_as_player_2(ip):
 	print("Join as player 2 pressed")
