@@ -5,8 +5,8 @@ const SERVER_IP = "127.0.0.1"
 
  #local host
 
-var multiplayer_scene1 = preload("res://scenes/multiplayer_player1.tscn")
-var multiplayer_scene2 = preload("res://scenes/multiplayer_player2.tscn")
+var multiplayer_scene1 = preload("res://scenes/multiplayer/players/multiplayer_player1.tscn")
+var multiplayer_scene2 = preload("res://scenes/multiplayer/players/multiplayer_player2.tscn")
 
 var _player_spawn_node
 var host_mode_enabled = false

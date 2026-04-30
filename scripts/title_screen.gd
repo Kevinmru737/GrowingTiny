@@ -23,8 +23,8 @@ var tween: Tween
 @export var animation_speed: float = 0.2  # Duration of scale animation in seconds
 
 # Fake players
-@onready var fake_po_scene = preload("res://scenes/player_tater_po.tscn")
-@onready var fake_daisy_scene = preload("res://scenes/player_della_daisy.tscn")
+@onready var fake_po_scene = preload("res://scenes/characters/player_tater_po.tscn")
+@onready var fake_daisy_scene = preload("res://scenes/characters/player_della_daisy.tscn")
 
 
 func _ready():

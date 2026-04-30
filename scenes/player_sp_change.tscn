@@ -1,18 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbnyi3sjtynfu"]
+[gd_scene format=3 uid="uid://cbnyi3sjtynfu"]
 
 [ext_resource type="Script" uid="uid://xa3ipnsg62lr" path="res://scripts/player_sp_change_1.gd" id="1_tphlm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mmfjm"]
 size = Vector2(20, 181)
 
-[node name="PlayerSPChange1" type="Area2D"]
+[node name="PlayerSPChange1" type="Area2D" unique_id=225703579]
 collision_mask = 2
 script = ExtResource("1_tphlm")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-513, 174)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2027757687]
 shape = SubResource("RectangleShape2D_mmfjm")
 
-[node name="SPChangePosition" type="Marker2D" parent="."]
+[node name="SPChangePosition" type="Marker2D" parent="." unique_id=1199039004]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

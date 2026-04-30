@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://incclpjolruq" path="res://art/characters/DELLA_DAISY_ANIM.png" id="7_fheky"]
 [ext_resource type="Texture2D" uid="uid://bi4wnc4mixwyj" path="res://art/characters/Della_Anim.png" id="8_0f5sg"]
 [ext_resource type="AudioStream" uid="uid://bpomfd6qj2b0a" path="res://sound/effects/Text Box.wav" id="9_lgpg5"]
-[ext_resource type="PackedScene" uid="uid://bvxont8bhjyjn" path="res://scenes/camera_switcher.tscn" id="10_vhcx1"]
+[ext_resource type="PackedScene" uid="uid://bvxont8bhjyjn" path="res://scenes/ui/camera_switcher.tscn" id="10_vhcx1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mft2n"]
 atlas = ExtResource("1_lneyk")

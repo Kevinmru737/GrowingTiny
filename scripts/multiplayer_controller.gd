@@ -36,17 +36,17 @@ var walk_sound_interval: float = 0.5  # seconds between footsteps
 		%InputSynchronizer.set_multiplayer_authority(id)
 
 func _ready():
-	#if multiplayer.get_unique_id() == player_id:
-	#	$Camera2D.make_current()
-	#else:
+	if multiplayer.get_unique_id() == player_id:
+		$Camera2D.make_current()
+	else:
 	# disable for titlescreen
-	$Camera2D.enabled = false
+		$Camera2D.enabled = false
 	self.hide()
 	add_to_group("Players")
 	
 	# Adjusting Tater Po's jump height
 	if player_id == 1:
-		jump_velocity = -700
+		jump_velocity = -900
 		jump_type = "instant"
 	else:
 		jump_type = "slow"

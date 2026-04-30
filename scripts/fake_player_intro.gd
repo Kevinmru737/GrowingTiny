@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+# Used for cutscenes as a fake version of the player
 const INTRO_WALK_SPEED = 300
 const gravity = 2000
 @onready var animated_sprite = $AnimatedSprite2D

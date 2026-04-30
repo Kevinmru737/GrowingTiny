@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://incclpjolruq" path="res://art/characters/DELLA_DAISY_ANIM.png" id="4_x1ric"]
 [ext_resource type="Texture2D" uid="uid://bi4wnc4mixwyj" path="res://art/characters/Della_Anim.png" id="5_ecd83"]
 [ext_resource type="AudioStream" uid="uid://bpomfd6qj2b0a" path="res://sound/effects/Text Box.wav" id="7_x1ric"]
-[ext_resource type="PackedScene" uid="uid://bvxont8bhjyjn" path="res://scenes/camera_switcher.tscn" id="8_ecd83"]
+[ext_resource type="PackedScene" uid="uid://bvxont8bhjyjn" path="res://scenes/ui/camera_switcher.tscn" id="8_ecd83"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6q285"]
 

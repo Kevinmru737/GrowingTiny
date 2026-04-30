@@ -1,12 +1,17 @@
 extends Node
 
-@onready var spawn_point = get_tree().get_first_node_in_group("SpawnPoint").position
+var spawn_point: Vector2
 @onready var game_manager = get_tree().get_first_node_in_group("GameManager")
 
 var curr_bg = "Backgrounds"
 var tilemap_original_state = {}
 
 func _ready():
+	var spawn_node = get_tree().get_first_node_in_group("SpawnPoint")
+	if spawn_node:
+		spawn_point = spawn_node.position
+	else:
+		push_error("SpawnPoint not found!")
 	print("level 1 started")
 	MultiplayerManager.respawn_point = spawn_point
 	get_tree().create_timer(0.1).timeout.connect(init_player_after_load) #fix race condition
@@ -17,13 +22,14 @@ func _ready():
 	PlayerRef.player_in_transit = false
 
 func init_player_after_load():
-	rpc("turn_on_camera")
 	get_tree().call_group("Players", "change_camera_limit", 0, -1080, 0, 12300)
 	get_tree().call_group("Players", "spawn_player")
 	get_tree().call_group("Players", "show")
+	rpc("turn_on_camera")
 
 @rpc("any_peer", "reliable", "call_local")
 func turn_on_camera():
+	print(get_tree().get_nodes_in_group("Players"))
 	for player in get_tree().get_nodes_in_group("Players"):
 		if multiplayer.get_unique_id() == player.player_id:
 			print("found player to turn camera on")

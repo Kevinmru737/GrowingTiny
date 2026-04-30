@@ -24,7 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://bfnuowrhwsmmy" path="res://art/ui/title_screen/Fall_StartScreen_6.png" id="22_u8ss3"]
 [ext_resource type="Texture2D" uid="uid://lsapa1a8surw" path="res://art/ui/title_screen/Fall_Transition_6.png" id="23_dksua"]
 [ext_resource type="Texture2D" uid="uid://gccfdgd68aq3" path="res://art/environment/fall_level/Fall_BG_5_variation_3.png" id="24_dufxj"]
-[ext_resource type="PackedScene" uid="uid://bvxont8bhjyjn" path="res://scenes/camera_switcher.tscn" id="25_mj62m"]
+[ext_resource type="PackedScene" uid="uid://bvxont8bhjyjn" path="res://scenes/ui/camera_switcher.tscn" id="25_mj62m"]
 [ext_resource type="Script" uid="uid://bqt0pxhgpcq1u" path="res://scripts/end_of_intro.gd" id="26_le3e3"]
 [ext_resource type="Script" uid="uid://b8abip3ernchj" path="res://scripts/list_lobbies.gd" id="27_ivfjy"]
 

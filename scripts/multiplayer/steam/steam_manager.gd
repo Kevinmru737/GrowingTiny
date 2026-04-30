@@ -13,7 +13,7 @@ func _init():
 	OS.set_environment("SteamAppId", str(steam_app_id))
 	OS.set_environment("SteamGameId", str(steam_app_id))
 	
-func _process(delta):
+func _process(_delta):
 	Steam.run_callbacks()
 	
 func initialize_steam():

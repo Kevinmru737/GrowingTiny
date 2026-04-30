@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bfunenyabxvh4" path="res://art/ui/dialogue/DellaDialogue.png" id="9_vo3ks"]
 [ext_resource type="Texture2D" uid="uid://bi4wnc4mixwyj" path="res://art/characters/Della_Anim.png" id="9_vv3cp"]
 [ext_resource type="AudioStream" uid="uid://bpomfd6qj2b0a" path="res://sound/effects/Text Box.wav" id="10_vo3ks"]
-[ext_resource type="PackedScene" uid="uid://bvxont8bhjyjn" path="res://scenes/camera_switcher.tscn" id="11_cy0gx"]
+[ext_resource type="PackedScene" uid="uid://bvxont8bhjyjn" path="res://scenes/ui/camera_switcher.tscn" id="11_cy0gx"]
 [ext_resource type="Texture2D" uid="uid://m7ab8bdhxqda" path="res://art/characters/RIC_STILL_ANIM.png" id="15_10q3b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vv3cp"]
