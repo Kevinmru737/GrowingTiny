@@ -309,6 +309,9 @@ position = Vector2(1419, -373)
 [node name="Spawn" type="Marker2D" parent="FakePlayerSpawn" unique_id=563860623]
 position = Vector2(-83, 0)
 
+[node name="Spawn2" type="Marker2D" parent="FakePlayerSpawn" unique_id=1298160863]
+position = Vector2(2321, 0)
+
 [node name="CameraSwitcher" parent="." unique_id=260469429 instance=ExtResource("25_mj62m")]
 visible = false
 

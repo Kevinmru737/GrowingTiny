@@ -6,6 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://incclpjolruq" path="res://art/characters/DELLA_DAISY_ANIM.png" id="3_pistx"]
 [ext_resource type="Script" uid="uid://bbjnwd861cumu" path="res://scripts/breakable_tile_detector.gd" id="5_0p76c"]
 [ext_resource type="AudioStream" uid="uid://bgti8yg8f255g" path="res://sound/effects/Maraj_Tashya_GrowingTiny_DellaDaisy_SingleStep_Grass.wav" id="6_nov17"]
+[ext_resource type="Script" uid="uid://c3xyebna0fqoo" path="res://scripts/player/states/states.gd" id="7_537a6"]
+[ext_resource type="Script" uid="uid://bmur10q41ejcd" path="res://scripts/player/states/locked_state.gd" id="8_tftq7"]
+[ext_resource type="Script" uid="uid://cugjseu5gqjms" path="res://scripts/player/states/idle_state.gd" id="9_agffe"]
+[ext_resource type="Script" uid="uid://dokf6ifb82pqw" path="res://scripts/player/states/run_state.gd" id="10_hvdl8"]
+[ext_resource type="Script" uid="uid://bhkqj70m6ao0s" path="res://scripts/player/states/jump_state.gd" id="11_4e305"]
+[ext_resource type="Script" uid="uid://gbkqqfy3ljn5" path="res://scripts/player/states/jump_peak_state.gd" id="12_o7s0s"]
+[ext_resource type="Script" uid="uid://8c1vacpgmuyq" path="res://scripts/player/states/fall_state.gd" id="13_w40c8"]
+[ext_resource type="Script" uid="uid://buy2nga16w2c5" path="res://scripts/player/states/landing_state.gd" id="14_ade23"]
 
 [sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_k8tkd"]
 properties/0/path = NodePath(".:player_id")
@@ -248,7 +256,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_20m8c")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 3.0
 }, {
@@ -286,7 +294,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cupgs")
 }],
-"loop": true,
+"loop": 1,
 "name": &"jump_left",
 "speed": 11.0
 }, {
@@ -294,7 +302,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_y1khf")
 }],
-"loop": true,
+"loop": 1,
 "name": &"jump_left_down",
 "speed": 8.0
 }, {
@@ -305,7 +313,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_qxdm0")
 }],
-"loop": true,
+"loop": 1,
 "name": &"jump_left_down1",
 "speed": 8.0
 }, {
@@ -316,7 +324,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cupgs")
 }],
-"loop": false,
+"loop": 0,
 "name": &"jump_left_land",
 "speed": 24.0
 }, {
@@ -333,7 +341,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cupgs")
 }],
-"loop": false,
+"loop": 0,
 "name": &"jump_left_land1",
 "speed": 10.0
 }, {
@@ -341,7 +349,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cupgs")
 }],
-"loop": false,
+"loop": 0,
 "name": &"jump_left_land_instant",
 "speed": 24.0
 }, {
@@ -352,7 +360,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ymhwq")
 }],
-"loop": false,
+"loop": 0,
 "name": &"jump_left_pre",
 "speed": 10.0
 }, {
@@ -369,7 +377,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vt468")
 }],
-"loop": false,
+"loop": 0,
 "name": &"jump_left_pre1",
 "speed": 10.0
 }, {
@@ -377,7 +385,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_svbwc")
 }],
-"loop": true,
+"loop": 1,
 "name": &"jump_left_up",
 "speed": 8.0
 }, {
@@ -388,7 +396,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_svbwc")
 }],
-"loop": true,
+"loop": 1,
 "name": &"jump_left_up1",
 "speed": 8.0
 }, {
@@ -426,7 +434,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1g7fa")
 }],
-"loop": true,
+"loop": 1,
 "name": &"jump_right",
 "speed": 11.0
 }, {
@@ -434,7 +442,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ot1qt")
 }],
-"loop": true,
+"loop": 1,
 "name": &"jump_right_down",
 "speed": 8.0
 }, {
@@ -445,7 +453,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_p7tln")
 }],
-"loop": true,
+"loop": 1,
 "name": &"jump_right_down1",
 "speed": 8.0
 }, {
@@ -456,7 +464,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pistx")
 }],
-"loop": false,
+"loop": 0,
 "name": &"jump_right_land",
 "speed": 24.0
 }, {
@@ -473,7 +481,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ot1qt")
 }],
-"loop": false,
+"loop": 0,
 "name": &"jump_right_land1",
 "speed": 10.0
 }, {
@@ -481,7 +489,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pistx")
 }],
-"loop": false,
+"loop": 0,
 "name": &"jump_right_land_instant",
 "speed": 24.0
 }, {
@@ -492,7 +500,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1g7fa")
 }],
-"loop": false,
+"loop": 0,
 "name": &"jump_right_pre",
 "speed": 10.0
 }, {
@@ -509,7 +517,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1g7fa")
 }],
-"loop": false,
+"loop": 0,
 "name": &"jump_right_pre1",
 "speed": 10.0
 }, {
@@ -517,7 +525,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_p7tln")
 }],
-"loop": true,
+"loop": 1,
 "name": &"jump_right_up",
 "speed": 8.0
 }, {
@@ -528,7 +536,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ndyp4")
 }],
-"loop": true,
+"loop": 1,
 "name": &"jump_right_up1",
 "speed": 8.0
 }, {
@@ -557,7 +565,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ko74g")
 }],
-"loop": true,
+"loop": 1,
 "name": &"left_walk",
 "speed": 8.0
 }, {
@@ -586,7 +594,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_1tp4l")
 }],
-"loop": true,
+"loop": 1,
 "name": &"right_walk",
 "speed": 8.0
 }, {
@@ -615,7 +623,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_j1vwf")
 }],
-"loop": true,
+"loop": 1,
 "name": &"side_walk_old",
 "speed": 8.0
 }]
@@ -626,11 +634,7 @@ size = Vector2(26, 155)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0p76c"]
 size = Vector2(28, 158)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6r4u"]
-size = Vector2(204, 20)
-
 [node name="MultiPlayerPlayer2" type="CharacterBody2D" unique_id=69874465]
-position = Vector2(-1, 0)
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_pistx")
@@ -646,7 +650,7 @@ script = ExtResource("2_0p76c")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=619759402]
 position = Vector2(0, -52)
 sprite_frames = SubResource("SpriteFrames_2gq5w")
-animation = &"jump_left_down"
+animation = &"right_walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=785933156]
 position = Vector2(0, -47)
@@ -676,13 +680,29 @@ debug_color = Color(0.7803942, 0.43447652, 0.13396496, 0.41960785)
 stream = ExtResource("6_nov17")
 bus = &"SFX"
 
-[node name="Brace" type="StaticBody2D" parent="." unique_id=787125755]
-collision_mask = 2
+[node name="StateMachine" type="Node" parent="." unique_id=1042177852]
+script = ExtResource("7_537a6")
 
-[node name="DellaBracePlatform" type="CollisionShape2D" parent="Brace" unique_id=2017189018]
-position = Vector2(2, -75)
-shape = SubResource("RectangleShape2D_o6r4u")
-one_way_collision = true
+[node name="Locked" type="Node" parent="StateMachine" unique_id=1451306507]
+script = ExtResource("8_tftq7")
+
+[node name="Idle" type="Node" parent="StateMachine" unique_id=1751066304]
+script = ExtResource("9_agffe")
+
+[node name="Run" type="Node" parent="StateMachine" unique_id=468339867]
+script = ExtResource("10_hvdl8")
+
+[node name="Jump" type="Node" parent="StateMachine" unique_id=450055509]
+script = ExtResource("11_4e305")
+
+[node name="JumpPeak" type="Node" parent="StateMachine" unique_id=1572888745]
+script = ExtResource("12_o7s0s")
+
+[node name="Fall" type="Node" parent="StateMachine" unique_id=1923326279]
+script = ExtResource("13_w40c8")
+
+[node name="Landing" type="Node" parent="StateMachine" unique_id=70549622]
+script = ExtResource("14_ade23")
 
 [connection signal="timeout" from="DeathTimer" to="." method="_respawn"]
 [connection signal="body_shape_entered" from="TileDetector" to="TileDetector" method="_on_body_shape_entered"]

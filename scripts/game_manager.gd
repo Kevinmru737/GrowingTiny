@@ -35,7 +35,6 @@ func _input(_event: InputEvent) -> void:
 func next_scene():
 	var scene_to_load = scene_list[0]
 	if scene_to_load:
-		print("loading scene", scene_to_load)
 		MultiplayerManager.request_scene_change(scene_list[0])
 		scene_list.remove_at(0)
 		
@@ -45,7 +44,6 @@ func load_scene(scene_resource):
 		child.queue_free()
 	# Add new scene
 	var new_node = scene_resource.instantiate()
-	print("loading scene as: ", new_node.name, " on peer: ", multiplayer.get_unique_id())
 	scene_container.add_child(new_node)
 	return new_node
 

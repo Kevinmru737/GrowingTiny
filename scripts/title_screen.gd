@@ -102,7 +102,7 @@ func add_fake_players():
 	fake_po.add_to_group("FakePlayers")
 	fake_daisy.add_to_group("FakePlayers")
 	
-	var fake_po_spawn = $FakePlayerSpawn/Spawn.global_position
+	var fake_po_spawn = $FakePlayerSpawn/Spawn2.global_position
 	fake_po.global_position = fake_po_spawn
 	print(fake_po_spawn)
 	fake_daisy.global_position = fake_po_spawn + Vector2(150, 0)
