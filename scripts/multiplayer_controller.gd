@@ -8,7 +8,7 @@ const FALL_GRAVITY: float = 2500
 
 # Physics Variables
 var move_speed: float = 300
-var jump_velocity: float = -1000
+var jump_velocity: float = -1500
 var gravity: float = DEFAULT_GRAVITY
 @export var acceleration: float = 1500
 @export var decceleration: float = 1200
@@ -74,7 +74,7 @@ func _ready():
 	
 	# Adjusting Tater Po's jump height
 	if player_id == 1:
-		jump_velocity = -700
+		jump_velocity = -1000
 		jump_type = "instant"
 	else:
 		# If we add more jump types this may be relevant, but for now its useless
@@ -105,7 +105,7 @@ func change_state(new_state):
 		current_state = new_state
 		previous_state.exit_state()
 		current_state.enter_state()
-		print("state change from: ", previous_state.state_name, "to ", current_state.state_name)
+		print("state change from: ", previous_state.state_name, " to ", current_state.state_name)
 
 #endregion
 
@@ -147,7 +147,6 @@ func x_movement(delta: float):
 # Checks if the player is falling and applies y_velocity if necessary
 # CHANGES STATES
 func handle_falling(delta: float, curr_gravity: float = DEFAULT_GRAVITY):
-	
 	if not _is_on_floor:
 		velocity.y += delta * curr_gravity
 		
@@ -186,7 +185,6 @@ func _movement(delta):
 	
 	# adds walk sound timing
 	check_walk_sound()
-	
 
 	# Apply gravity
 	handle_falling(delta, gravity)
@@ -196,8 +194,6 @@ func _movement(delta):
 func _process_jump():
 	var curr_anim = animated_sprite.animation
 	var curr_frame = animated_sprite.frame
-	
-
 
 	# Apply jump velocity during pre-jump
 	if curr_anim in ["jump_right_pre1", "jump_left_pre1"]:
